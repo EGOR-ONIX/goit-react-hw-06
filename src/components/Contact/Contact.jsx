@@ -7,11 +7,11 @@ function Contact({ id, name, number, onDelete }) {
     <>
       <ul className={css.information}>
         <li>
-          <FaUser />
+          <FaUser className={css.icon} />
           <span>{name}</span>
         </li>
         <li>
-          <FaPhoneAlt />
+          <FaPhoneAlt className={css.icon} />
           <span>{number}</span>
         </li>
       </ul>

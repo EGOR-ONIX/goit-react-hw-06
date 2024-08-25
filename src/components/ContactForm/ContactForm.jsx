@@ -42,29 +42,32 @@ function ContactForm() {
       validationSchema={FormScheme}
     >
       <Form className={css.form}>
-        <label className={css["wrapper-input"]} htmlFor={nameFieldId}>
-          <span>Name</span>
-          <Field
-            className={css.input}
-            type="text"
-            name="name"
-            placeholder="Egor Shvachko"
-            id={nameFieldId}
-          />
-          <ErrorMessage className={css.error} name="name" component="span" />
-        </label>
-
-        <label className={css["wrapper-input"]} htmlFor={numberFieldId}>
-          <span>Number</span>
-          <Field
-            className={css.input}
-            type="tel"
-            name="number"
-            placeholder="xxx-xx-xx"
-            id={numberFieldId}
-          />
-          <ErrorMessage className={css.error} name="number" component="span" />
-        </label>
+        <div className={css["wrapper-inputs"]}>
+          <label className={css.label} htmlFor={nameFieldId}>
+            <Field
+              className={css.input}
+              type="text"
+              name="name"
+              placeholder="Name"
+              id={nameFieldId}
+            />
+            <ErrorMessage className={css.error} name="name" component="span" />
+          </label>
+          <label className={css.label} htmlFor={numberFieldId}>
+            <Field
+              className={css.input}
+              type="tel"
+              name="number"
+              placeholder="Number"
+              id={numberFieldId}
+            />
+            <ErrorMessage
+              className={css.error}
+              name="number"
+              component="span"
+            />
+          </label>
+        </div>
 
         <button className={css.btn} type="submit">
           Add contact
