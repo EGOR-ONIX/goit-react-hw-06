@@ -1,5 +1,6 @@
-import css from "./Contact.module.css";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
+
+import css from "./Contact.module.css";
 
 function Contact({ id, name, number, onDelete }) {
   return (
